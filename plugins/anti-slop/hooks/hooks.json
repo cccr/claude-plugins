@@ -1,0 +1,16 @@
+{
+  "description": "Scan the final reply for AI-slop patterns and request a plain-language rewrite",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/detect.py\"",
+            "timeout": 45
+          }
+        ]
+      }
+    ]
+  }
+}

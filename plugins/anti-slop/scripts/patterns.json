@@ -1,0 +1,60 @@
+{
+  "settings": {
+    "min_words": 40,
+    "trigger_score": 2,
+    "em_dash_per_100_words": 1.5,
+    "em_dash_weight": 1,
+    "max_flagged_sentences": 8
+  },
+  "style_brief": [
+    "Say the claim once, directly. Do not set up a negation first and then correct it.",
+    "Use everyday words a person would say out loud.",
+    "Prefer short plain sentences; vary their length.",
+    "No stock phrases, no cheerleading, no wrap-up slogans.",
+    "Keep every fact, number and name exactly as is."
+  ],
+  "patterns": [
+    {
+      "id": "negation_pair",
+      "weight": 2,
+      "label": "negation pair (\"no X, no Y\")",
+      "regex": "\\b(?:no|not|never|without)\\s+[^.,;:!?\\n]{1,40},\\s*(?:and\\s+)?(?:no|not|never|without)\\s+[^.,;:!?\\n]{1,40}"
+    },
+    {
+      "id": "not_just",
+      "weight": 2,
+      "label": "\"not just X, it's Y\"",
+      "regex": "\\bnot\\s+(?:just|only|merely|simply)\\b[^.\\n]{1,80}?[,;\\u2014\\u2013-]\\s*(?:but\\s+)?(?:it'?s|it\\s+is|but|also)\\b"
+    },
+    {
+      "id": "isnt_its",
+      "weight": 2,
+      "label": "\"X isn't A, it's B\"",
+      "regex": "\\b(?:this|that|it|he|she|they|which)\\s+(?:isn'?t|is\\s+not|wasn'?t|was\\s+not|aren'?t|are\\s+not|doesn'?t|does\\s+not)\\s+[^.,;\\u2014\\n]{1,60}[,;\\u2014\\u2013]\\s*(?:it'?s|it\\s+is|that'?s|they'?re|it\\s+was|he'?s|she'?s|it\\s+\\w+s)\\b"
+    },
+    {
+      "id": "not_about_but",
+      "weight": 2,
+      "label": "\"not about X, but Y\"",
+      "regex": "\\bnot\\s+(?:about|because|a|an|the)\\s+[^.\\n]{1,50},\\s*(?:but|it'?s|it\\s+is)\\b"
+    },
+    {
+      "id": "whether_youre",
+      "weight": 1,
+      "label": "\"whether you're X or Y\"",
+      "regex": "\\bwhether\\s+you'?re\\s+[^.\\n]{1,50}\\s+or\\s+[^.\\n]{1,50}"
+    },
+    {
+      "id": "stock_phrase",
+      "weight": 1,
+      "label": "stock phrase",
+      "regex": "\\b(?:let'?s\\s+dive\\s+(?:in|into)|dive\\s+(?:deep\\s+)?into|delve[sd]?|rich\\s+tapestry|tapestry\\s+of|navigate\\s+the\\s+(?:landscape|complexit\\w+)|game[- ]chang(?:er|ing)|a\\s+testament\\s+to|in\\s+today'?s\\s+fast[- ]paced|it'?s\\s+worth\\s+noting|unlock\\s+the\\s+(?:power|potential)|ever[- ]evolving|here'?s\\s+the\\s+thing|let\\s+that\\s+sink\\s+in|buckle\\s+up|at\\s+the\\s+end\\s+of\\s+the\\s+day|seamless(?:ly)?|robust\\s+solution|elevate\\s+your)\\b"
+    },
+    {
+      "id": "flattery_opener",
+      "weight": 1,
+      "label": "flattery opener",
+      "regex": "^\\s*(?:great|excellent|fantastic|wonderful|good)\\s+(?:question|point|catch)\\b"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "behind-the-scenes",
+  "version": "0.1.0",
+  "description": "Turns a project's Claude Code session transcripts into a behind_the_scenes/ folder: one raw transcript and one narrative summary per session, plus a README index.",
+  "author": {
+    "name": "cccr"
+  },
+  "keywords": [
+    "transcripts",
+    "history",
+    "documentation"
+  ]
+}

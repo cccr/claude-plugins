@@ -1,0 +1,42 @@
+{
+  "skill_name": "behind-the-scenes",
+  "evals": [
+    {
+      "id": "widget-tool-fresh",
+      "prompt": "We've done a bunch of work on this project across a couple of sessions and I think there was even some history from before it lived here. Can you dig through everything and save it into files I can use later, both the raw stuff and a readable summary of what happened?",
+      "expected_output": "A behind_the_scenes/ folder created inside the project root, with one raw+summary pair per substantive session (the CSV-export session), the noise-only /help session correctly excluded or clearly not given its own entry, and the lost predecessor's memory notes surfaced as their own entry (clearly marked as reconstructed from memory, not a transcript).",
+      "files": [],
+      "assertions": [
+        "A behind_the_scenes/ (or equivalent) output folder was created inside the fixture project root itself, not in /tmp or a scratch/agent-only location",
+        "There is a raw+summary pair covering the CSV-export session, and the summary specifically mentions the quantity/qty column bug (not just a generic 'added CSV export' statement)",
+        "The noise-only '/help' session was not given its own full raw+summary pair (or if included, is clearly and correctly labeled as not substantive)",
+        "The lost predecessor project's Flask-vs-Django memory note was found and surfaced as its own entry, explicitly labeled as reconstructed from memory notes rather than a real transcript",
+        "An index/README file exists listing the sessions covered"
+      ]
+    },
+    {
+      "id": "mycodo-real",
+      "prompt": "Save the history of what we did in this project into files, raw and summarized, so I can reference it later.",
+      "expected_output": "A behind_the_scenes/ folder in the project root with a raw+summary pair covering the one real session found. Summary should read as an accurate, specific narrative of what actually happened in that transcript, not a generic template.",
+      "files": [],
+      "assertions": [
+        "A behind_the_scenes/ (or equivalent) output folder was created inside the fixture project root itself",
+        "There is a raw+summary pair covering the one real session",
+        "The summary reflects the session's actual content (a playful/testing exchange about an approval dialog and an ESP32 device) rather than inventing generic feature-development language the transcript doesn't support",
+        "The raw file contains verbatim or near-verbatim text from the real transcript (not a paraphrase), so it's usable for pulling exact quotes"
+      ]
+    },
+    {
+      "id": "iotuesday-incremental",
+      "prompt": "We did a bit more work here since last time (fixed a typo in an episode title). Can you update the behind_the_scenes folder with anything new?",
+      "expected_output": "Only the one new session gets a new raw+summary pair. All 6 pre-existing entries and the README are left untouched (byte-identical or near-identical, no regeneration/duplication). README gets one new row appended for the new session.",
+      "files": [],
+      "assertions": [
+        "The 6 pre-existing raw/summary file pairs (12 files) are left untouched — byte-identical or near-identical to what was pre-populated, not regenerated",
+        "Exactly one new raw+summary pair was added, covering only the new typo-fix session",
+        "No duplicate files were created for any of the 6 already-covered sessions",
+        "The README/index was updated to include the new session rather than left stale or fully rewritten from scratch"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "cccr-plugins",
+  "owner": {
+    "name": "cccr"
+  },
+  "metadata": {
+    "description": "Claude Code plugins by cccr: anti-slop and behind-the-scenes."
+  },
+  "plugins": [
+    {
+      "name": "anti-slop",
+      "source": "./plugins/anti-slop",
+      "description": "Catches common AI-writing tells in Claude's replies and has them rewritten plainly."
+    },
+    {
+      "name": "behind-the-scenes",
+      "source": "./plugins/behind-the-scenes",
+      "description": "Archives a project's Claude Code sessions as transcripts plus narrative summaries."
+    }
+  ]
+}

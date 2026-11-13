@@ -1,0 +1,7 @@
+{
+  "name": "anti-slop",
+  "version": "0.1.0",
+  "description": "Catches common AI-writing tells in Claude's final reply (negation triplets, 'not just X, it's Y', stock phrases) and has them rewritten in plain, natural wording.",
+  "author": { "name": "cccr" },
+  "keywords": ["writing", "style", "hooks", "slop"]
+}
