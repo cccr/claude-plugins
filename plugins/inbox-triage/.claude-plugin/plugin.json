@@ -1,0 +1,7 @@
+{
+  "name": "inbox-triage",
+  "version": "0.1.0",
+  "description": "Says at session start how many harvested entries wait in the inbox, and a skill sorts them into the project's lessons, decisions and results files with the user deciding each one.",
+  "author": {"name": "cccr"},
+  "keywords": ["lessons", "inbox", "triage", "notes"]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "harvest",
+  "version": "0.1.0",
+  "description": "At the end of each session (and before a compaction), a headless Claude reads the new part of the transcript and appends lessons, decisions and results to a private inbox. Opt-in per project with .claude/harvest.json.",
+  "author": {"name": "cccr"},
+  "keywords": ["lessons", "hooks", "notes", "transcript"]
+}

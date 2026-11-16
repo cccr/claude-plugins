@@ -1,21 +1,35 @@
 {
-  "name": "cccr-plugins",
+  "name": "cccr",
   "owner": {
     "name": "cccr"
   },
   "metadata": {
-    "description": "Claude Code plugins by cccr: anti-slop and behind-the-scenes."
+    "description": "cccr's Claude Code plugins"
   },
   "plugins": [
     {
       "name": "anti-slop",
       "source": "./plugins/anti-slop",
-      "description": "Catches common AI-writing tells in Claude's replies and has them rewritten plainly."
+      "description": "Catches common AI-writing tells in Claude's replies and has them rewritten plainly.",
+      "version": "0.1.0"
     },
     {
       "name": "behind-the-scenes",
       "source": "./plugins/behind-the-scenes",
-      "description": "Archives a project's Claude Code sessions as transcripts plus narrative summaries."
+      "description": "Archives a project's Claude Code sessions as transcripts plus narrative summaries.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "harvest",
+      "source": "./plugins/harvest",
+      "description": "Harvest lessons, decisions and results from each session into a private inbox.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "inbox-triage",
+      "source": "./plugins/inbox-triage",
+      "description": "Report the harvested inbox at session start and sort it with the user.",
+      "version": "0.1.0"
     }
   ]
 }
